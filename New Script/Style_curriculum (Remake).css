@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("../Bg/5.jpg");
+}
+.container{
+	display: grid;
+	grid-template-columns: 1fr 3.5fr 1fr;
+	grid-template-rows: 14vh 80rem 8vh;
+	grid-template-areas: "h h h" "n m b" "f f f";
+
+}
+nav{
+	display: flex;
+	background: #Fff;
+	grid-area: h;
+	border-bottom: 0.2rem solid #46C242;
+	position: sticky;
+	justify-content: center;
+	align-items: center;
+}
+img{
+	background-color: #fff;
+}
+main{
+	background: #fff;
+	grid-area: m;
+	border-radius: 5rem;
+	margin-top: 1.1rem;
+	margin-bottom: 1.1rem;
+	border: 0.2rem solid #46C242;
+	grid-template-columns: 
+}
+aside{
+	background: black;
+	grid-area: a;
+}
+footer{
+	background: #94B6D2;
+	grid-area: f;
+}
