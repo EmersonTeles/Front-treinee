@@ -11,7 +11,7 @@ body{
 .container{
 	display: grid;
 	grid-template-columns: 1fr 3fr 1fr;
-	grid-template-rows: 15vh 69.5rem 6vh;
+	grid-template-rows: 6.5rem 69.5rem 6vh;
 	grid-template-areas: "h h h" " d main b" "d f b";
     grid-row-gap: 1rem;
     z-index: 10;
@@ -20,7 +20,7 @@ nav{
 	display: grid;
 	background: #Fff;
 	grid-area: h;
-	border-bottom: 0.2rem solid #46C242;
+	border-bottom: 0.15rem solid #46C242;
 	position: sticky;
 	justify-content: center;
 	align-items: center;
@@ -28,8 +28,7 @@ nav{
     
 }
 #logo{
-    height: 12vh;
-    z-index: 12;
+    height: 6rem;
 }
 main{
 	display: grid; 
