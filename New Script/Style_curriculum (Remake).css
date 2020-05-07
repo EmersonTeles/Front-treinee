@@ -175,6 +175,26 @@ input[name="r"]{
 .titulo2{
     margin-top: 3rem;
 }
+
+.fa.fa-github{
+    position: relative;
+    font-size: 30px;
+    color: #4684AF;
+    margin-left: 1rem;
+    
+}
+.fa.fa-instagram{
+    position: relative;
+    font-size: 30px;
+    color: #4684AF;
+    margin-left: 1rem;
+}
+.fa.fa-instagram:hover{
+  color: white;
+}
+.fa.fa-github:hover{
+  color: white;
+}
 footer{
 	display:grid;
 	grid-area: f;
