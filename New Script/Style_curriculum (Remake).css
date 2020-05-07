@@ -2,41 +2,285 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-image: url("../Bg/5.jpg");
+}
+body{
+	background-image: url("../Bg/5.jpg");
+    font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
+    z-index:8;
 }
 .container{
 	display: grid;
-	grid-template-columns: 1fr 3.5fr 1fr;
-	grid-template-rows: 14vh 80rem 8vh;
-	grid-template-areas: "h h h" "n m b" "f f f";
-
+	grid-template-columns: 1fr 3fr 1fr;
+	grid-template-rows: 15vh 69.5rem 6vh;
+	grid-template-areas: "h h h" " d main b" "d f b";
+    grid-row-gap: 1rem;
+    z-index: 10;
 }
 nav{
-	display: flex;
+	display: grid;
 	background: #Fff;
 	grid-area: h;
 	border-bottom: 0.2rem solid #46C242;
 	position: sticky;
 	justify-content: center;
 	align-items: center;
+    z-index: 11;
+    
 }
-img{
-	background-color: #fff;
+#logo{
+    height: 12vh;
+    z-index: 12;
 }
 main{
-	background: #fff;
-	grid-area: m;
-	border-radius: 5rem;
-	margin-top: 1.1rem;
-	margin-bottom: 1.1rem;
-	border: 0.2rem solid #46C242;
-	grid-template-columns: 
+	display: grid; 
+	background-color: white;
+	grid-area: main;
+	border: 0.1rem solid #46C242;
+    border-radius: 5rem;
+    grid-template-columns: 1fr 2fr;
+    grid-column-gap: 0rem;
+    z-index: 9;
+    width: 60rem;
 }
-aside{
-	background: black;
-	grid-area: a;
+#conteudo{
+    background: rgba(70, 194, 66,40%);
+    grid-column: 2;
+    grid-row: 1;
+    border-top-right-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    margin: 1rem 1rem 1rem 0.5rem;
+    height: 67rem;
+    width: 2fr;
+}
+#Contatos{
+    position: relative;
+    background: rgba(0,0,0,10%);
+    grid-column: 1;
+    grid-row: 1;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    margin: 1rem 0.5rem 1rem 1rem;
+    height: 67rem;
+    width: 1fr;
+}
+#Nome{
+    font-size: 7rem;
+    align-content: end;
+    color: white;
+    margin-left: 0.5rem;
+}
+#NomeCelular{
+    display: none;
+}
+h2{
+    color: #4684AF;
+    position: relative;
+    border-bottom: 1px solid #46C242;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+h3{
+    margin-left: 2rem;
+}
+p{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+#tira-margin-bottom{
+    margin-bottom: 0;
+}
+#grafico{
+  margin: 0.5rem 1rem 1rem 2rem;
+  border-radius: 1rem 4rem; 
+}
+/*------------------------------------------------------------------*/
+/*-----------------foto de perfil com slide-------------------------*/
+/*-------------------------abaixo-----------------------------------*/
+/*------------------------------------------------------------------*/
+.middleC{
+    display: none;
+}
+.middle{
+    position: relative;
+    top: 9rem;
+    left: 9rem;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 3rem 0rem 1rem 1rem;
+    border:4px solid  #94B6D2;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+.slides{
+    width: 700%;
+    height: 100%;
+    display: flex;
+}
+.slide{
+    width: 20%;
+    transition: 0.6s;
+}
+.slide img{
+    position: relative;
+    right: 5rem;
+    width: 24rem;
+    height: 16rem;
+    border-radius: 2rem 0rem 1rem 1rem;
+}
+.navigation{
+    position: absolute;
+    bottom: 1rem;
+    left:50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar{
+    display: flex;
+    width: 0.4rem;
+    height: 0.38rem;
+    border: 0.05rem solid #fff;
+    margin: 0.7rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.bar:hover{
+    background: white;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    margin:0.45rem;
+}
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
+#midia{
+    margin-top:3rem;
+}
+.titulo2{
+    margin-top: 3rem;
 }
 footer{
-	background: #94B6D2;
+	display:grid;
 	grid-area: f;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;  
+	###tentar alterar a distancia dele para o fundo da tela###
+}
+@media(max-width: 1055px){
+	main{
+		width: 91vw;
+		}
+    #contatos{
+        width: 1fr;
+    }
+    #conteudo{
+        width: 1fr;  
+    }
+    .middle{
+        position: relative;
+        top:13.5vw;
+        left: 13.5vw;
+        width:24vw;
+        height:24vw;
+    }
+    .slide img{
+        right: 7.5vw;
+        width:36vw;
+        height:24vw;
+    }
+    #grafico{
+        width: 52vw;
+    }
+    #Nome{
+        font-size: 10.5vw;
+    }
+}
+@media(max-width:830px){
+    body{
+        background-image: url();
+        background-color: whitesmoke;
+    }
+    .container{
+        grid-row-gap: 0;
+    }
+    main{
+        display: none; 
+        grid-template-columns: auto;
+        background-color: snow;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 0;
+        border-radius:0;
+        border: 0rem none blue;
+        width: 100vw;
+    }
+    /*#Contatos{
+        background: none;
+        grid-column: auto;
+        grid-row:1;
+    }
+    .middle{
+        left: 10rem;
+        top:5.4rem;
+        width:900vw;
+        height:50vw;
+        border-radius: 0;
+        border: none;
+    }
+    .slide img{
+        right: 0;
+        width:80vw;
+        height:50vw;
+        border-radius: 0;
+    }
+    aside{
+        position: absolute;
+        grid-area: foto;
+    }
+    #Nome{
+        display: none;
+    }
+    #conteudo{
+        background: none;
+        grid-column: auto;
+        grid-row:2;
+    }
+    #grafico{
+        width: 70vw;
+    }
+    #NomeCelular{
+        display: grid;
+        font-size: 7rem;
+        justify-content: center;
+        font-size: 10vw;
+        color: #46C242;
+        font
+    }
+    h2{
+        color: #4684AF;
+        position: relative;
+        border-bottom: 1px solid #46C242;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+    }
+    */
+    footer{
+        font-size: 1rem;
+    }
 }
