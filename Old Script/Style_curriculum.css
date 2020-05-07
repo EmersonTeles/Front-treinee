@@ -4,7 +4,7 @@
 }
 body{
   background-color: #f3f3f3;
-  background-image: url("Bg/5.jpg");
+  background-image: url("../Bg/5.jpg");
 
   font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
   height: 900px;
@@ -38,7 +38,7 @@ p{
 #backg{
   width: 1000px;
   height: 1070px;
-  background-image: url("Figuras/back site-9.png");
+  background-image: url("../Figuras/back site-9.png");
   border-radius: 80px;
   margin: 0 auto;
   margin-top: 10px;
