@@ -18,7 +18,9 @@ body{
 }
 nav{
 	display: grid;
-	background: #Fff;
+    position: fixed;
+    top: 0;
+	background: white;
 	grid-area: h;
 	border-bottom: 0.15rem solid #46C242;
 	position: sticky;
