@@ -5,16 +5,36 @@
 }
 body{
 	background-image: url("../Bg/5.jpg");
+    background-position: bottom;
     font-family: Century Gothic,CenturyGothic,AppleGothic,sans-serif;
     z-index:8;
 }
 .container{
 	display: grid;
 	grid-template-columns: 1fr 3fr 1fr;
-	grid-template-rows: 6.5rem 69.5rem 6vh;
-	grid-template-areas: "h h h" " d main b" "d f b";
+	grid-template-rows: 42rem 6.5rem 69.5rem 6vh;
+	grid-template-areas: "home home home" "h h h" " d main b" "d f b";
     grid-row-gap: 1rem;
     z-index: 10;
+}
+#home{
+    grid-area: home;
+    background: solid black;
+}
+#bg_home{
+    width: 80%;
+}
+#arrow{
+    width: 10rem;
+    height: 10rem;
+    align-content: center;
+    justify-content: center;
+}
+.al fa-chevron-double-down{
+    position: absolute;
+    top: 5rem;
+    font-size: 5rem;
+    color:black;
 }
 nav{
 	display: grid;
@@ -23,6 +43,7 @@ nav{
 	background: white;
 	grid-area: h;
 	border-bottom: 0.15rem solid #46C242;
+    border-top: 0.15rem solid #46C242;
 	position: sticky;
 	justify-content: center;
 	align-items: center;
@@ -251,56 +272,6 @@ footer{
         border: 0rem none blue;
         width: 100vw;
     }
-    /*#Contatos{
-        background: none;
-        grid-column: auto;
-        grid-row:1;
-    }
-    .middle{
-        left: 10rem;
-        top:5.4rem;
-        width:900vw;
-        height:50vw;
-        border-radius: 0;
-        border: none;
-    }
-    .slide img{
-        right: 0;
-        width:80vw;
-        height:50vw;
-        border-radius: 0;
-    }
-    aside{
-        position: absolute;
-        grid-area: foto;
-    }
-    #Nome{
-        display: none;
-    }
-    #conteudo{
-        background: none;
-        grid-column: auto;
-        grid-row:2;
-    }
-    #grafico{
-        width: 70vw;
-    }
-    #NomeCelular{
-        display: grid;
-        font-size: 7rem;
-        justify-content: center;
-        font-size: 10vw;
-        color: #46C242;
-        font
-    }
-    h2{
-        color: #4684AF;
-        position: relative;
-        border-bottom: 1px solid #46C242;
-        margin-left: 1rem;
-        margin-bottom: 1rem;
-    }
-    */
     footer{
         font-size: 1rem;
     }
